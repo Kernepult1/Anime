@@ -1,0 +1,15 @@
+/* Styly pro stránku tab1 */
+
+ion-toolbar {
+  --ion-color-base: #ffffff; /* Bílá barva textu */
+  --ion-background-color: #1E90FF; /* světle modrá barva pozadí */
+}
+
+ion-searchbar {
+  --ion-color-base: #ffffff; /* Bílá barva textu ve vyhledávacím prvku */
+  --ion-background-color: #1E90FF; /* světle modrá barva pozadí */
+}
+
+ion-content {
+  --ion-background-color: #0000b8;
+}

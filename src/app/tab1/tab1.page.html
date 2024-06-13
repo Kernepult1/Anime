@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Anime List
+    </ion-title>
+  </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar [debounce]="500" (ionInput)="searchAnime($event)"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Anime</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list>
+    <ion-item *ngFor="let a of anime$ | async" routerLink="/anime-detail" (click)="transferAnime(a)">
+      <ion-img [src]="a.images.jpg.small_image_url"></ion-img>
+      <ion-label>{{ a.title }}</ion-label>
+      <ion-note slot="end">
+        Episodes: {{ a.episodes }}
+      </ion-note>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
